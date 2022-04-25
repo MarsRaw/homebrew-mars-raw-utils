@@ -4,9 +4,9 @@
 class Marsrawutils < Formula
     desc "Utilities for working with publicly available raw MSL, Mars2020, and InSight images"
     homepage "https://github.com/kmgill/mars-raw-utils"
-    url "https://github.com/kmgill/mars-raw-utils/archive/refs/tags/v0.3.2.tar.gz"
-    sha256 "30e4c279118a954de69a2e7366be7d0d18d3a7af8b81d8922559dd342c073ed7"
-    version "0.3.2"
+    url "https://github.com/kmgill/mars-raw-utils/archive/refs/tags/v0.3.3.tar.gz"
+    sha256 "19c95f37ae3efc904c289d4ccbcb2e81c4f45ea4dcb195b7d3eef181bef24c34"
+    version "0.3.3"
 
     depends_on "rust" => :build
 
@@ -17,6 +17,7 @@ class Marsrawutils < Formula
 
     def install
       (prefix/"data").install resource("marsdata")
+      ENV["MARSDATAROOT"] = "#{prefix}/data"
       system "cargo", "install", "--locked", "--root", prefix, "--path", "."
     end
   end
