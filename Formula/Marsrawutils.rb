@@ -10,7 +10,13 @@ class Marsrawutils < Formula
 
     depends_on "rust" => :build
 
+    resource "marsdata" do
+      url "https://github.com/kmgill/mars-raw-utils-data/releases/download/0.3.2/mars-raw-utils-data-0.3.2.tar.gz"
+      sha256 "58509ae09bf3a96c1e972705303949f1e327e4c0efe37c68d5aaa55865dc52a9"
+    end
+
     def install
+      (buildpath/"data").install resource("marsdata")
       system "cargo", "install", "--locked", "--root", prefix, "--path", "."
     end
   end
