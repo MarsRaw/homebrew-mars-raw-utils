@@ -16,7 +16,7 @@ class Marsrawutils < Formula
     end
 
     def install
-      (buildpath/"data").install resource("marsdata")
+      (prefix/"data").install resource("marsdata")
       system "cargo", "install", "--locked", "--root", prefix, "--path", "."
     end
   end
