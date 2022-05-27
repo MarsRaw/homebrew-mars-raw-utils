@@ -4,9 +4,9 @@
 class Marsrawutils < Formula
     desc "Utilities for working with publicly available raw MSL, Mars2020, and InSight images"
     homepage "https://github.com/kmgill/mars-raw-utils"
-    url "https://github.com/kmgill/mars-raw-utils/archive/refs/tags/v0.5.0.tar.gz"
-    sha256 "636681b574cafe078f31f3af1cda879bbbbf457cf47e4c3d5c6d7449ea42a619"
-    version "0.5.0"
+    url "https://github.com/kmgill/mars-raw-utils/archive/refs/tags/v0.5.1.tar.gz"
+    sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    version "0.5.1"
 
     depends_on "rust" => :build
 
